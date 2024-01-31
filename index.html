@@ -45,10 +45,40 @@
             <span style="--i:11"></span>
             <span style="--i:15"></span>
             <span style="--i:3"></span>
-            <span style="--i:5"></span>
+            <span style="--i:25"></span>
             <span style="--i:14"></span>
+            <span style="--i:5"></span>
+        </div>
+
+        <div class="menu-container">
+            <h2>Sobre Mim</h2>
+            <button onclick="abrirIntroducao()">Introdução</button>
+            <button onclick="abrirCandidatando()">Por que me Candidatei?</button>
+            <button onclick="abrirExpectativa()">Expectativa com o Projeto</button>
+
+            <div id="modalIntroducao" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="fecharIntroducao()">&times;</span>
+                    <p class="menuText">a</p>
+                </div>
+            </div>
+
+            <div id="modalCandidatando" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="fecharCandidatando()">&times;</span>
+                    <p class="menuText">b</p>
+                </div>
+            </div>
+
+            <div id="modalExpectativa" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="fecharExpectativa()">&times;</span>
+                    <p class="menuText">c</p>
+                </div>
+            </div>
         </div>
     </main>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
