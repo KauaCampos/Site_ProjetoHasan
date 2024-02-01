@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Honk&family=Press+Start+2P&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 
 * {
     margin: 0;
@@ -31,7 +31,7 @@ main {
     margin: 0 4px;
     border-radius: 50%;
     box-shadow: 0 0 0 10px #e5ff0044, 0 0 50px #e5ff00, 0 0 100px #e5ff00;
-    animation: animacao calc(125s / var(--i)) linear infinite;
+    animation: animacao calc(150s / var(--i)) linear infinite;
 }
 
 @keyframes animacao {
@@ -58,32 +58,77 @@ main {
     padding: 30px;
     border-radius: 10px;
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes rainbow {
+    0% {
+        color: #ff0000;
+    }
+
+    16.666% {
+        color: #ff7f00;
+    }
+
+    33.333% {
+        color: #ffff00;
+    }
+
+    50% {
+        color: #00ff00;
+    }
+
+    66.666% {
+        color: #0000ff;
+    }
+
+    83.333% {
+        color: #4b0082;
+    }
+
+    100% {
+        color: #9400d3;
+    }
 }
 
 h2 {
-    font-family: 'Honk', system-ui;
-    font-size:3em;
+    font-family: "Press Start 2P", cursive;
+    animation: rainbow 7.5s linear infinite;
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+    font-size: 3.5em;
 }
 
 button {
     margin-top: 20px;
-    padding: 15px;
-    font-size: 18px;
+    padding: 20px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-family: "Press Start 2P", cursive;
+    animation: rainbow 7.5s linear infinite;
+    transition: transform 0.3s ease;
+}
+
+button:hover,
+h2:hover {
+    transform: scale(1.1);
 }
 
 .modal {
     display: none;
     position: fixed;
     z-index: 1;
-    right: 100%; 
+    right: 100%;
     top: 0;
-    width: 80%; 
+    width: 80%;
     height: 100%;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.7);
-    animation: slideIn 0.5s forwards; 
+    animation: slideIn 0.5s forwards;
 }
 
 .modal-content {
@@ -91,17 +136,18 @@ button {
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 100%; 
+    width: 100%;
     max-height: 80%;
     overflow-y: auto;
 }
 
 @keyframes slideIn {
     from {
-        right: 100%; 
+        right: 100%;
     }
+
     to {
-        right: 10%; 
+        right: 10%;
     }
 }
 
@@ -121,6 +167,6 @@ button {
 }
 
 .menuText {
-    font-family: "Press Start 2P", cursive;
+    font-family: "Roboto", sans-serif;
+    color: black;
 }
-
