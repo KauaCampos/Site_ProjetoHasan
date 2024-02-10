@@ -83,7 +83,42 @@ let audio = document.getElementById('audio');
 function alternarAudio() {
     if (audio.paused) {
         audio.play(); // Toca o áudio se estiver pausado
-    } else {
+    }
+
+    else {
         audio.pause(); // Pausa o áudio se estiver tocando
     }
+}
+
+let pressedKeys = [];
+
+const nyanCat = document.getElementById('nyan-cat');
+
+document.addEventListener('keydown', (event) => {
+    pressedKeys.push(event.key);
+    if (pressedKeys.length > 10) {
+        pressedKeys.shift();
+    }
+
+    const secretCode = 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,b,a';
+    if (pressedKeys.join(',') === secretCode) {
+        nyanCat.style.display = 'block';
+        moveNyanCat();
+    }
+});
+
+function moveNyanCat() {
+    let position = -100; // Posição inicial ajustada para iniciar fora da tela
+    const screenWidth = window.innerWidth;
+    const nyanCatWidth = nyanCat.offsetWidth;
+    const maxPosition = screenWidth;
+
+    const intervalId = setInterval(() => {
+        if (position >= maxPosition) {
+            clearInterval(intervalId);
+            nyanCat.style.display = 'none';
+        }
+        position += 5;
+        nyanCat.style.left = position + 'px';
+    }, 50);
 }

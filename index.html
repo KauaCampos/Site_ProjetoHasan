@@ -12,7 +12,7 @@
 
 <body>
     <main>
-        <audio id="audio" loop autoplay volume="0.2">
+        <audio id="audio" loop autoplay>
             <source src="audio/background.mp3" type="audio/mpeg">
         </audio>
 
@@ -63,21 +63,57 @@
             <div id="modalIntroducao" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="fecharIntroducao()">&times;</span>
-                    <p class="menuText">a</p>
+                    <p class="menuText">Olá, meu nome é Kauã Magalhães Antunes Campos. Venho por meio deste site me
+                        apresentar e demonstrar como posso ajudar no projeto "Desenvolvimento de um Sistema para Gestão
+                        de Propriedade Intelectual para Instituições de Ciência e Tecnologia" do professor Daniel Hasan.
+                    </p>
+                    <p class="menuText">Sou aluno do curso técnico de Informática e estou no segundo ano. Nasci na
+                        cidade de
+                        Conselheiro Lafaiete, aproximadamente a 100km de BH. Minha vontade após formar no Cefet-MG é
+                        fazer
+                        Ciências da Computação na UFMG. Fiz três anos de curso de Inglês na Uptime e hoje sou fluente na
+                        língua. Além dos estudos, minha maior paixão é a música, tocando violão, guitarra e outros
+                        instrumentos.
+                    </p>
+                    <p class="menuText">Na programação tenho experiência com a linguagem C, FrontEnd (HTML, CSS e
+                        JavaScript), estou fazendo um curso de Java e sei algumas coisas de Python. Uma das coisas que
+                        mais me orgulho do ano letivo de 2023 foi eu ter fechado (tirado 30 pontos) na disciplina de
+                        LALP, do
+                        professor Maffort.</p>
                 </div>
             </div>
 
             <div id="modalCandidatando" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="fecharCandidatando()">&times;</span>
-                    <p class="menuText">b</p>
+                    <p class="menuText">Nesta janela irei explicar porque que estou me candidatando para a bolsa no
+                        projeto de extensão do Professor Hasan.</p>
+                    <p class="menuText">Primeiramente, será um prazer participar da equipe de desenvolvimento do projeto
+                        caso
+                        eu seja escolhido. Sinto que posso ajudar em várias áreas. Gosto muito de trabalhar em equipe e
+                        sempre estou à disposição para ajudar.</p>
+                    <p class="menuText">Outro fator que me motivou a inscrever-me foi a possibilidade de adquirir mais
+                        conhecimento sobre Python, uma linguagem de grande importância atualmente no mercado de trabalho
+                        na área de TI.</p>
                 </div>
             </div>
 
             <div id="modalExpectativa" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="fecharExpectativa()">&times;</span>
-                    <p class="menuText">c</p>
+                    <p class="menuText">Para finalizar, irei falar um pouco sobre minhas expectativas com o projeto
+                        "Desenvolvimento de um Sistema para Gestão
+                        de Propriedade Intelectual para Instituições de Ciência e Tecnologia".</p>
+                    <p class="menuText">Estou muito animado para a experiência e aprendizados que irei adquirir caso eu
+                        participe do projeto. Será algo que com certeza irá me ajudar na minha carreira profissional em
+                        um futuro próximo.</p>
+                    <p class="menuText">Não posso negar que a bolsa também me interessa, assim como a todos que irão
+                        fazer o processo seletivo. A bolsa de 420 reais irá me ajudar bastante, já que sou de
+                        Conselheiro Lafaiete e tenho muitos gastos para continuar estudando em Belo Horizonte. Porém
+                        mesmo não conseguindo a bolsa pretendo fazer como voluntário, justamente pela experiência.</p>
+                    <p class="menuText">Este foi o site, espero que você tenha gostado professor. Espero que considere
+                        me escolher para ganhar a bolsa, tenho certeza que você não irá se arrepender. E só de
+                        curiosidade, feche a janela e faça o seguinte código no teclado: ↑ ↑ ↓ ↓ ← → ← → B A</p>
                 </div>
             </div>
         </div>
@@ -86,6 +122,7 @@
             <button onclick="alternarCoresNeon()">Alternar Cores</button>
             <button onclick="alternarAudio()">Alternar Música</button>
         </div>
+        <img id="nyan-cat" src="images/cat-nyan-cat.gif" alt="Nyan Cat">
     </main>
     <script src="script.js" defer></script>
 </body>

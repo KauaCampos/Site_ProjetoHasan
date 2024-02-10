@@ -58,7 +58,7 @@ main {
 }
 
 .menu-container {
-    text-align: center;
+    text-align: justify;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -112,7 +112,6 @@ button {
     padding: 20px;
     font-size: 20px;
     background: none;
-    border: none;
     border: 2px solid transparent;
     cursor: pointer;
     font-family: "Press Start 2P", cursive;
@@ -141,7 +140,7 @@ h2:hover {
 .modal-content {
     background-color: #fefefe;
     margin: 10% auto;
-    padding: 10vw;
+    padding: 5vw;
     border: 1px solid #888;
     width: 100%;
     max-height: 80%;
@@ -166,6 +165,7 @@ h2:hover {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    margin: 10px;
 }
 
 .close:hover,
@@ -178,6 +178,7 @@ h2:hover {
 .menuText {
     font-family: "Roboto", sans-serif;
     color: black;
+    padding-bottom: 7.5px;
 }
 
 .menuOpcoes {
@@ -200,4 +201,15 @@ h2:hover {
     font-size: 24px;
     cursor: pointer;
     z-index: 999;
+}
+
+#nyan-cat {
+    position: fixed;
+    bottom: 200px;
+    left: -100px;
+    width: 200px; 
+    height: auto;
+    pointer-events: none;
+    z-index: 9999;
+    display: none;
 }
