@@ -12,6 +12,10 @@
 
 <body>
     <main>
+        <audio id="audio" loop autoplay volume="0.2">
+            <source src="audio/background.mp3" type="audio/mpeg">
+        </audio>
+
         <div class="bolhas">
             <span style="--i:7"></span>
             <span style="--i:27"></span>
@@ -80,6 +84,7 @@
         <button class="menu-button" onclick="abrirMenu()">☰</button>
         <div id="menuOpcoes" class="menuOpcoes">
             <button onclick="alternarCoresNeon()">Alternar Cores</button>
+            <button onclick="alternarAudio()">Alternar Música</button>
         </div>
     </main>
     <script src="script.js" defer></script>

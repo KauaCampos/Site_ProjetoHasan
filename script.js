@@ -56,8 +56,8 @@ function alternarCoresNeon() {
         });
 
         coresNeonAtivadas = true;
-    } 
-    
+    }
+
     else {
         bolhasPares.forEach(span => {
             span.style.background = '#2dc3ff'; // Cor azul original
@@ -76,4 +76,14 @@ function alternarCoresNeon() {
 function getCorNeon(i) {
     const coresNeon = ['#ff66ff', '#00ffff', '#ffff66', '#66ff66']; // Cores neon
     return coresNeon[i % coresNeon.length];
+}
+
+let audio = document.getElementById('audio');
+
+function alternarAudio() {
+    if (audio.paused) {
+        audio.play(); // Toca o áudio se estiver pausado
+    } else {
+        audio.pause(); // Pausa o áudio se estiver tocando
+    }
 }
