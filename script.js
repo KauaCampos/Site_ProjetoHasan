@@ -107,6 +107,9 @@ let teclasApertadas = [];
 // Elemento de imagem do Nyan Cat
 const nyanCat = document.getElementById('nyan-cat');
 
+//Elemento do audio secreto
+const secretAudio = document.getElementById('secretAudio');
+
 // Evento de tecla pressionada para ativar o efeito secreto do Nyan Cat
 document.addEventListener('keydown', (event) => {
     teclasApertadas.push(event.key);
@@ -118,16 +121,17 @@ document.addEventListener('keydown', (event) => {
     if (teclasApertadas.join(',') === secretCode) {
         nyanCat.style.display = 'block'; // Exibe o Nyan Cat
         moveNyanCat(); // Inicia o movimento do Nyan Cat
+        secretAudio.play(); // Toca o audio
     }
 });
 
 // Função para mover o Nyan Cat pela tela
 function moveNyanCat() {
-    let position = -100; // Posição inicial ajustada para iniciar fora da tela
+    let position = -100; 
     const telaTamanho = window.innerWidth;
     const nyanCatWidth = nyanCat.offsetWidth;
     const maxPosition = telaTamanho;
-
+    
     const intervalId = setInterval(() => {
         if (position >= maxPosition) {
             clearInterval(intervalId); // Limpa o intervalo quando o Nyan Cat chega ao final da tela
