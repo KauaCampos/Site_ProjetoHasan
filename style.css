@@ -53,7 +53,7 @@ main {
 /* Ocultar as bolhas em dispositivos menores */
 @media screen and (max-width: 650px) {
     .bolhas {
-        display: none; 
+        display: none;
     }
 }
 
@@ -184,10 +184,10 @@ h2:hover {
 .menuOpcoes {
     position: fixed;
     top: 55px;
-    left: 15px; 
+    left: 15px;
     border: transparent;
     margin: 10px;
-    display: none; 
+    display: none;
     background-color: transparent;
     animation: deslizando 0.5s forwards;
 }
@@ -207,9 +207,25 @@ h2:hover {
     position: fixed;
     bottom: 200px;
     left: -100px;
-    width: 200px; 
+    width: 200px;
     height: auto;
     pointer-events: none;
     z-index: 9999;
     display: none;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 117.5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
