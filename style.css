@@ -144,9 +144,9 @@ h2:hover {
     border: 1px solid #888;
     width: 100%;
     max-height: 80%;
-    scrollbar-width: thin; 
-    scrollbar-color: #2dc3ff #f1f1f1; 
-    overflow-y: auto; 
+    scrollbar-width: thin;
+    scrollbar-color: #2dc3ff #f1f1f1;
+    overflow-y: auto;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -155,7 +155,7 @@ h2:hover {
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-    background: #2dc3ff; 
+    background: #2dc3ff;
 }
 
 .modal-content::-webkit-scrollbar-thumb:hover {
@@ -210,7 +210,7 @@ h2:hover {
 .menu-button {
     position: fixed;
     top: 17.5px;
-    left: 20px;
+    left: 0.75em;
     background-color: transparent;
     border: transparent;
     font-size: 24px;
@@ -230,19 +230,64 @@ h2:hover {
 }
 
 .profile-picture {
-    max-width: 100%; 
-    height: 150px; 
+    max-width: 100%;
+    height: 150px;
     width: 150px;
     overflow: hidden;
     border-radius: 50%;
     margin-top: 20px;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .profile-picture img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
+}
+
+#by {
+    font-family: "Press Start 2P", cursive;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #10223d;
+    font-size: 1em;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+@keyframes comemoracao {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.comemoracao {
+    animation: comemoracao 1s ease-in-out;
 }

@@ -127,11 +127,11 @@ document.addEventListener('keydown', (event) => {
 
 // Função para mover o Nyan Cat pela tela
 function moveNyanCat() {
-    let position = -100; 
+    let position = -100;
     const telaTamanho = window.innerWidth;
     const nyanCatWidth = nyanCat.offsetWidth;
     const maxPosition = telaTamanho;
-    
+
     const intervalId = setInterval(() => {
         if (position >= maxPosition) {
             clearInterval(intervalId); // Limpa o intervalo quando o Nyan Cat chega ao final da tela
@@ -140,4 +140,44 @@ function moveNyanCat() {
         position += 5; // Incrementa a posição do Nyan Cat
         nyanCat.style.left = position + 'px'; // Atualiza a posição do Nyan Cat
     }, 50); // Intervalo de atualização de posição em milissegundos
+}
+
+// Abrir modal Decifre
+function abrirDecifre() {
+    const modal = document.getElementById('modalDecifre');
+    modal.style.display = 'block';
+    const menuOpcoes = document.getElementById('menuOpcoes');
+    menuOpcoes.style.display = menuAberto ? 'none' : 'block';
+    menuAberto = !menuAberto;
+}
+
+function fecharDecifre() {
+    const modal = document.getElementById('modalDecifre');
+    modal.style.display = 'none';
+}
+
+
+// Verificar valor inserido no modal Decifre
+function verificarValor() {
+    var valorInserido = document.getElementById("entradaValor").value;
+    if (valorInserido === "24780351") {
+        exibirAnimacaoComemoracao();
+    }
+
+    else {
+        document.getElementById("resultado").innerHTML = ":'-("
+    }
+}
+
+function exibirAnimacaoComemoracao() {
+    var resultado = document.getElementById("resultado");
+    resultado.textContent = "EU MEREÇO ESTA VAGA";
+    resultado.classList.add("comemoracao");
+
+    // Remover a classe de animação após um período de tempo
+    setTimeout(function () {
+        resultado.classList.remove("comemoracao");
+    }, 1000);
+
+    secretAudio.play(); // Toca o audio
 }

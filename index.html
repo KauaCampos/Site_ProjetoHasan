@@ -60,6 +60,7 @@
             <button onclick="abrirIntroducao()">Introdução</button>
             <button onclick="abrirCandidatando()">Por que me Candidatei?</button>
             <button onclick="abrirExpectativa()">Expectativa com o Projeto</button>
+            <p id="by">By Kauã Campos</p>
 
             <div id="modalIntroducao" class="modal">
                 <div class="modal-content">
@@ -121,11 +122,52 @@
                         curiosidade, feche a janela e faça o seguinte código no teclado: ↑ ↑ ↓ ↓ ← → ← → B A</p>
                 </div>
             </div>
+            <div id="modalDecifre" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="fecharDecifre()">&times;</span>
+                    <div class="table-container">
+                        <table>
+                            <caption class="menuText">Vetor:</caption>
+                            <tbody>
+                                <tr>
+                                    <td class="menuText">0</td>
+                                    <td class="menuText">1</td>
+                                    <td class="menuText">2</td>
+                                    <td class="menuText">3</td>
+                                    <td class="menuText">4</td>
+                                    <td class="menuText">5</td>
+                                    <td class="menuText">6</td>
+                                    <td class="menuText">7</td>
+                                    <td class="menuText">8</td>
+                                </tr>
+                                <tr>
+                                    <td class="menuText">ES</td>
+                                    <td class="menuText">GA</td>
+                                    <td class="menuText">EU</td>
+                                    <td class="menuText">TA</td>
+                                    <td class="menuText">ME</td>
+                                    <td class="menuText">VA</td>
+                                    <td class="menuText">RO</td>
+                                    <td class="menuText">RE</td>
+                                    <td class="menuText">ÇO</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="menuText">Agora decifre qual a ordem do vetor que irá fazer a frase corretamente,
+                        exemplo:
+                        "123456789".</p>
+                    <input type="text" id="entradaValor" placeholder="Digite a ordem">
+                    <button onclick="verificarValor()">Verificar</button>
+                    <div id="resultado" class="menuText"></div>
+                </div>
+            </div>
         </div>
         <button class="menu-button" onclick="abrirMenu()">☰</button>
         <div id="menuOpcoes" class="menuOpcoes">
-            <button onclick="alternarCoresNeon()">Alternar Cores</button>
+            <button onclick="alternarCoresNeon()">Alternar Fundo</button>
             <button onclick="alternarAudio()">Alternar Música</button>
+            <button onclick="abrirDecifre()">Decifre</button>
         </div>
         <img id="nyan-cat" src="images/cat-nyan-cat.gif" alt="Nyan Cat">
     </main>
