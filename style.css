@@ -298,3 +298,7 @@ th {
     padding-bottom: 7.5px;
     font-size: 15px;
 }
+
+input {
+    text-transform: uppercase
+}
