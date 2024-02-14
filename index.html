@@ -128,7 +128,7 @@
                     <div class="table-container">
                         <table>
                             <caption class="menuText">Vetor:</caption>
-                            <tbody>
+                             <tbody>
                                 <tr>
                                     <td class="menuText">0</td>
                                     <td class="menuText">1</td>
@@ -154,10 +154,12 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="menuText">Agora decifre qual a ordem do vetor que irá fazer a frase corretamente,
-                        exemplo:
-                        "123456789".</p>
-                    <input type="text" id="entradaValor" placeholder="Digite a ordem">
+                    <!--24780351-->
+                    <p class="codigoDecifre">let frase1 = vetor[2] + "  " + vetor[4] + vetor[7] + vetor[8];</p>
+                    <p class="codigoDecifre">let frase2 = "  " + vetor[0] + vetor[3] + "  " +vetor[5] + vetor[1];</p>
+                    <p class="codigoDecifre">console.log(frase1 + frase2);</p>
+                    <p class="menuText">Qual é a saída deste programa?</p>
+                    <input type="text" id="entradaValor" placeholder="Digite a saída">
                     <button onclick="verificarValor()">Verificar</button>
                     <div id="resultado" class="menuText"></div>
                 </div>

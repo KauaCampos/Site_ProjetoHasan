@@ -291,3 +291,10 @@ th {
 .comemoracao {
     animation: comemoracao 1s ease-in-out;
 }
+
+.codigoDecifre {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    padding-bottom: 7.5px;
+    font-size: 15px;
+}

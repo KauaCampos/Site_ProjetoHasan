@@ -160,7 +160,7 @@ function fecharDecifre() {
 // Verificar valor inserido no modal Decifre
 function verificarValor() {
     var valorInserido = document.getElementById("entradaValor").value;
-    if (valorInserido === "24780351") {
+    if (valorInserido === "EU MEREÇO ESTA VAGA" || valorInserido === "eu mereço esta vaga") {
         exibirAnimacaoComemoracao();
     }
 
@@ -171,7 +171,7 @@ function verificarValor() {
 
 function exibirAnimacaoComemoracao() {
     var resultado = document.getElementById("resultado");
-    resultado.textContent = "EU MEREÇO ESTA VAGA";
+    resultado.textContent = "PARABÉNS  ツ";
     resultado.classList.add("comemoracao");
 
     // Remover a classe de animação após um período de tempo
